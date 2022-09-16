@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('dating app server is running smoothly')
+    res.send('dating app server is running smoothly 1')
 })
 
 
