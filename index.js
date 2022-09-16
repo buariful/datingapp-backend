@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('server is running smoothly')
+    res.send('dating app server is running smoothly')
 })
 
 
@@ -33,7 +33,7 @@ async function run() {
             const query = {};
             const cursor = database.find(query);
             const users = await cursor.toArray();
-            res.send(users)
+            res.send("users")
         })
     }
     finally {
