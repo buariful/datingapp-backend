@@ -26,14 +26,17 @@ async function run() {
         app.get('/ami', async (req, res) => {
             res.send("ami")
         })
-        await client.connect();
-        const database = client.db("datingapp").collection("users");
-
         app.get('/users', async (req, res) => {
             const query = {};
             const cursor = database.find(query);
             const users = await cursor.toArray();
             res.send("users")
+        })
+        await client.connect();
+        const database = client.db("datingapp").collection("users");
+
+        app.get('/tomi', (req, res) => {
+            res.send("tomi")
         })
     }
     finally {
