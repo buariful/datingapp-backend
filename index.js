@@ -23,9 +23,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run() {
     try {
-        app.get('/ami', async (req, res) => {
-            res.send("ami")
-        })
+
         app.get('/users', async (req, res) => {
             const query = {};
             const cursor = database.find(query);
